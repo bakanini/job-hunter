@@ -1,0 +1,62 @@
+.login-container{
+    margin: auto;
+    width:60%;
+    height: 300px;
+    background-color: rgba(240, 240, 255, 1);
+    color:gray;
+    position: absolute;
+    left:20%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.close-form{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+
+.form{
+    position: relative;
+    top:25%;
+    margin: auto;
+}
+
+.form-group{
+    width: 60%;
+    margin: auto;
+}
+
+.input{
+    width: 200px;
+    min-width: 100px;
+    border-style: hidden;
+    float: right;;
+}
+label{
+    width: 50px;
+    min-width: 25px;
+    text-align: left;
+}
+
+.bottom{
+    font-size: 20px;
+    height: 10%;
+    position: relative;
+    top:30%;
+    color: gray;
+}
+
+.login-btn{
+    width: 100px;
+    min-width: 30px;
+    border-style: hidden;
+    color:gray;
+    background-color: #8ec5fc80;
+}
+.signup-btn{
+    width: 100px;
+    border-style: hidden;
+    color:gray;
+    background-color: #e0c3fc80;
+}
