@@ -8,6 +8,8 @@ import '../styles/App.css';
 import Home from './Home';
 import Jobs from './Jobs';
 import SavedJobs from './SavedJobs';
+import Login from './Login';
+import Signup from './Signup';
 
 function App() {
   return (
@@ -15,6 +17,12 @@ function App() {
       <Switch>
         <Route path="/jobs">
           <Jobs />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/signup">
+          <Signup />
         </Route>
         <Route path="/savedjobs">
           <SavedJobs />

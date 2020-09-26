@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link,} from "react-router-dom";
-import {Row, Col } from 'reactstrap';
+import {Row, Col} from 'reactstrap';
 import Axios from 'axios';
 import '../styles/Home.css';
 import '../styles/Jobs.css';
@@ -8,7 +8,7 @@ import '../styles/Jobs.css';
 import Login from './Login';
 import Signup from './Signup';
 import JobItem from './Jobs';
-
+import Navbar from './Navbar'
 
 
 Axios.defaults.withCredentials = true;
@@ -147,13 +147,7 @@ class Home extends Component {
         const {isLoginActive, isRegisterActive,isLogged, jobs, isSearched} = this.state;
         return(
             <div className = 'home'>
-                <Row className = 'header'>
-                    {!isLogged &&<Col sm = {{size:"1",offset:10}} onClick = {this.switchLogin}>Log in</Col>}
-                    {!isLogged &&<Col sm = "1" onClick = {this.switchRegister}>Sign up</Col>}
-                    {isLogged && <Col sm = {{size:"1",offset:9}} onClick = {this.logOut}>Log out</Col>}
-                    {isLogged && <Col sm = {{size:"2"}}><Link className = "all-links" to = '/savedjobs'>Saved jobs</Link></Col>}
-                </Row>
-                
+                <Navbar />
                 <div className = 'search'>
                     <div id = 'title'>Find your next dream job</div>
                     <input id = 'input' onChange = {this.setSearch} placeholder = "  check jobs in your city..."></input>

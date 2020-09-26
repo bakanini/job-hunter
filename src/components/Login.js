@@ -1,28 +1,38 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../styles/Login.css';
 
-function Login (props){
-    
+class Login extends Component{
+    state = {
+        username: '',
+        password: '',
+    }
+    handleChange = (e) =>{
+        this.setState({[e.target.id]: e.target.value});
+    }
+
+    handleSubmit = (e) =>{
+        e.preventDefault();
+        console.log(this.state)
+    }
+    render(){
         return(
-            <div className = 'login-container'>
-                <div className = 'close-form' onClick = {props.closeLoginForm}>X</div>                
-                <div className = 'form'>
+            <div className = 'login-container'>             
+                <form className = 'form' onSubmit = {this.handleSubmit}>
                     <div className = 'form-group'>
                         <label>Username</label>
-                        <input className = 'input' type = 'text' name = 'username' onChange = {props.handleUserName}></input>
+                        <input className = 'input' type = 'username' id = 'username' onChange={this.handleChange}></input>
                     </div>
                     <div className = 'form-group'>
                         <label>Password</label>
-                        <input className = 'input' type = 'text' name = 'password' onChange = {props.handleUserPassword}></input>
+                        <input className = 'input' type = 'password' id = 'password' onChange={this.handleChange}></input>
                     </div>
-
-                </div>
-                <div className = 'bottom'>
-                    <button className = 'login-btn' onClick = {props.submit}>Log in</button>
-                </div> 
-
+                    <div className = 'bottom'>
+                        <button className = 'login-btn'>Log in</button>
+                    </div> 
+                </form>
             </div>
         )
+    }       
     
 }
 
